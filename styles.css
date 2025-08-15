@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  user-select: none;
+  background-image: linear-gradient(45deg, rgb(75, 0, 130, 0.7), transparent),
+                    linear-gradient(90deg, rgb(238, 130, 238, 0.7), transparent),
+                    linear-gradient(135deg, rgb(0, 0, 255, 0.7) 60%, transparent),
+                    linear-gradient(0deg, rgb(255, 0, 0, 0.7), transparent);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  -webkit-app-region: drag;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+button,input,select{
+  -webkit-app-region: no-drag;
+}
+
+.player {
+  width: 290px;
+  height: 190px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 5px;
+}
+
+.player:hover {
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+}
+
+.track-info {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  margin-top: 2vh;
+}
+
+.track-name-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+#track-name {
+  display: inline-block;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+#track-name.marquee {
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+#artist-name {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.progress-container {
+  width: 90%;
+  margin: 10px 0;
+}
+
+#progress-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  cursor: pointer;
+  accent-color: rgba(0, 255, 255, 0.8);
+  transition: opacity 0.3s ease;
+}
+
+#progress-bar:hover {
+  opacity: 0.8;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+img.control{
+  height: 30px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+button {
+  border: 1px solid black;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  background-color: #A8E1D0;
+  /* font-size: 20px; */
+  cursor: pointer;
+  transition: all 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.5);
+}
+
+button:active{
+  transform: scale(0.95);
+  box-shadow: 0 2px 15px rgba(0, 255, 255, 0.5);
+}
+
+button.active {
+  background: rgba(0, 255, 255, 0.6);
+}
+
+.volume-container {
+  width: 90%;
+  transform: translateY(-30%);
+}
+
+#volume-slider {
+  width: 100%;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  cursor: pointer;
+  accent-color: rgba(0, 255, 255, 0.8);
+  transition: opacity 0.3s ease;
+}
+
+#volume-slider:hover {
+  opacity: 0.8;
+}

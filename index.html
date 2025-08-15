@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mini Music Player</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="player">
+    <div class="track-info">
+      <div class="track-name-wrapper">
+        <span id="track-name">Select a folder to start</span>
+      </div>
+      <span id="artist-name"></span>
+    </div>
+    <div class="progress-container">
+      <input type="range" id="progress-bar" min="0" max="100" value="0">
+    </div>
+    <div class="controls">
+        <audio src="" id="audio-player"></audio>
+      <button id="prev-btn" title="Previous (Left Arrow)"><img src="Images/control-images/previous.JPG" class="control"></button>
+      <button id="play-pause-btn" title="Play/Pause (Space)"><img src="Images/control-images/play.JPG" class="control playPauseImg"></button>
+      <button id="next-btn" title="Next (Right Arrow)"><img src="Images/control-images/next.JPG" class="control"></button>
+      <button id="shuffle-btn" title="Shuffle (S)"><img src="Images/control-images/shuffle-enabled.JPG" class="control"></button>
+      <button id="repeat-btn" title="Repeat (A)"><img src="Images/control-images/loop-enabled.png" style="background-color: #A8E1D0; border: 1px solid black;" class="control"></button>
+      <button id="folder-btn" title="Select Folder"><img src="Images/control-images/folder.png" style="height: 25px;" class="control"></button>
+    </div>
+    <div class="volume-container">
+      <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+    </div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>
