@@ -1,4 +1,4 @@
-# 🎵 Mini Window Music Player
+# 🎵 Mini Melodious - Music Player
 
 A **simple, lightweight, and pleasant-to-use** desktop music player built with **Electron.js**.  
 It fetches music files from your **local directory**, remembers your library for future sessions, and provides all the **essential controls** you’d expect from a basic music player — all in a compact, minimal window.
